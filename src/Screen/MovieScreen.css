@@ -1,0 +1,77 @@
+.Totalbox {
+    width: 100%;
+}
+.moviedetails {
+    width: 95%;
+    margin: 5% auto;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.moviedetails tbody tr td {
+    color: #5e5e5e;
+}
+
+.moviedetails thead tr th {
+    background-color: #e0e0e0;
+}
+
+.moviedetails tr th,tr td {
+    padding: 0.9% 0.5%;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid #e1e1e1;
+    background-color: #f6f6f6;
+}
+
+/* .moviedetails tbody tr td {
+    background-color: #e0e0e0;
+    cursor: pointer;
+} */
+
+.moviedetails thead tr th:nth-child(1),
+.moviedetails tbody tr td:nth-child(1) {
+    width: 4%;
+    text-align: center;
+} 
+
+.moviedetails thead tr th:nth-child(2) {
+    width: 17%;
+} 
+
+.moviedetails thead tr th:nth-child(3) {
+    width: 5%;
+} 
+
+.moviedetails thead tr th:nth-child(4) {
+    width: 10%;
+} 
+.moviedetails thead tr th:nth-child(5) {
+    width: 13%;
+} 
+.moviedetails thead tr th:nth-child(6) {
+    width: 7%;
+} 
+.moviedetails thead tr th:nth-child(7) {
+    width: 10%;
+} 
+.moviedetails thead tr th:nth-child(8) {
+    width: 8%;
+} 
+.moviedetails thead tr th:nth-child(9) {
+    width: 8%;
+} 
+.moviedetails thead tr th:nth-child(10) {
+    width: 22%;
+} 
+input {
+    width: 15%;
+    height: 2.5rem;
+    border-radius: 8px;
+    background-color:#e1e1e1;
+}
+.Filters{
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+}

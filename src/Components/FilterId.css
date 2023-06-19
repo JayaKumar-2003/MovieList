@@ -1,0 +1,22 @@
+.one {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 92%;
+    margin-left: 2rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+}
+.Paginate{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    list-style: none;
+    cursor: pointer;
+}
+.Paginate-Div{
+    background-color: antiquewhite;
+    width: 20rem;
+}
