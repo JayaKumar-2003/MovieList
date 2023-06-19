@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { DataGrid } from '@mui/x-data-grid';
 import axios from 'axios';
 import PaginatedItems from "../Components/PaginatedItems";
 import { Store } from '../Store';
