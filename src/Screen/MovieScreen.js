@@ -72,14 +72,11 @@ export default function MovieScreen() {
            });
        ctxDispatch({ type: 'FILTER_DETAILS', payload: IdData });
     }
-    const handleSearchState = async () => {
-        const found = moviedetails.movies.find(obj => {
-            return obj.State === State;
-        });
-
-
-       
-
+    const handleSearchState = async (State) => {
+        const IdData = moviedetails.movies.filter((data) => {
+            return data['State'] === State
+           });
+       ctxDispatch({ type: 'FILTER_DETAILS', payload: IdData });
     }
     const handleSearchTaluk = async (Taluk) => {
         const IdData = moviedetails.movies.filter((data) => {
@@ -92,23 +89,7 @@ export default function MovieScreen() {
             return data['Box Office Collections (in Crores)'] === Number(BoxOffice)
            });
        ctxDispatch({ type: 'FILTER_DETAILS', payload: IdData });
-    }
-    
-
-    
-
-    const totalBoc = async () => {
-        let total = 0;
-    //    {!filter ? 
-    //     {(moviedetails.movies).map((data) => {
-
-    //         total += data['Box Office Collections (in Crores)']
-    //     })
-    //     Settotal(total) }: }
-     {!filter ? moviedetails.movies.reduce((total,data)=>total+data['Box Office Collections (in Crores)'],0): filterdetails.reduce((total,data)=>total+data['Box Office Collections (in Crores)'],0)}
-    }
-    
-
+        }  
     return (
         <div>
             
@@ -166,6 +147,13 @@ export default function MovieScreen() {
                     {moviedetails.movies && (moviedetails.movies).map((data) => {
                         
                         return <option>{data['Taluk']}</option>
+                    })}
+                </datalist>
+                <input list='seven' onChange={(e) => {handleSearchState(e.target.value);Setfilter(true) }}></input>
+                <datalist id='seven'>
+                    {moviedetails.movies && (moviedetails.movies).map((data) => {
+                        
+                        return <option>{data['State']}</option>
                     })}
                 </datalist>
             </div>
